@@ -404,6 +404,6 @@ I learned from the following links. Thank you very much.
 - [webpackのproductionモードで自動minyfyされなかった](https://qiita.com/Sotq_17/items/27a167302096a810d1ec)
 
 エラー解決
-[Solved] Webpack error static heartbeat interval = 1000
+[Solved] Webpack error static heartbeat interval = 1000  
 https://programmerah.com/webpack-error-static-heartbeat-interval-1000-45939/
 
