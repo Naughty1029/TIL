@@ -402,6 +402,7 @@ I learned from the following links. Thank you very much.
 - [webpack 4 入門](https://qiita.com/soarflat/items/28bf799f7e0335b68186)
 - [最新版で学ぶwebpack 5入門 JavaScriptのモジュールバンドラ](https://ics.media/entry/12140/)
 - [webpackのproductionモードで自動minyfyされなかった](https://qiita.com/Sotq_17/items/27a167302096a810d1ec)
+- [webpack 5の設定方法](https://yumegori.com/webpack5-setting-method)
 
 エラー解決
 [Solved] Webpack error static heartbeat interval = 1000  
