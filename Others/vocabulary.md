@@ -10,3 +10,6 @@ Here are some English words that I googled while reading English.
 | get bogged down  | 固執する、泥沼にはまる |we don't get bogged down with any framework-specific details. |
 | malicious | 腹黒い |thus preventing your website from publishing malicious content.|
 | tedious | 長ったらしい |This can save you the tens of hours of tedious work.|
+| associative arrays | 連想配列 |Associative arrays are arrays that use named keys that you assign to them.|
+| iterable | 反復可能な |'x' is not iterable.|
+| built-in function | 組み込み関数 |What is built-in function with example?|
