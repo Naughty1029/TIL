@@ -13,3 +13,5 @@ Here are some English words that I googled while reading English.
 | associative arrays | 連想配列 |Associative arrays are arrays that use named keys that you assign to them.|
 | iterable | 反復可能な |'x' is not iterable.|
 | built-in function | 組み込み関数 |What is built-in function with example?|
+| syntax | 構文・文法 |Note that it is not a loop syntax, but just a method.|
+| alternative to | 〜の代替として |You can use return as an alternative to continue.|
