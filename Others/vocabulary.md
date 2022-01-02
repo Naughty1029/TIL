@@ -15,3 +15,4 @@ Here are some English words that I googled while reading English.
 | built-in function | 組み込み関数 |What is built-in function with example?|
 | syntax | 構文・文法 |Note that it is not a loop syntax, but just a method.|
 | alternative to | 〜の代替として |You can use return as an alternative to continue.|
+| solidify | 固める |These are fun projects to help solidify some JS fundamentals.|
