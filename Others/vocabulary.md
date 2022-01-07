@@ -16,3 +16,4 @@
 | syntax | 構文・文法 |Note that it is not a loop syntax, but just a method.|
 | alternative to | 〜の代替として |You can use return as an alternative to continue.|
 | solidify | 固める |These are fun projects to help solidify some JS fundamentals.|
+| versatile | 用途が広い |Callbacks are versatile.|
