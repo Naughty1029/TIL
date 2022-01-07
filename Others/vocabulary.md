@@ -1,5 +1,5 @@
 # What Today I Learned...
-Here are some English words that I googled while reading English.
+技術記事を読んでいてわからなかった英単語を書き留めていく
 
 | 英語　| 日本語 | 例文 |
 | ------------- |-------------|-------------|
