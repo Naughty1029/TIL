@@ -17,3 +17,6 @@
 | alternative to | 〜の代替として |You can use return as an alternative to continue.|
 | solidify | 固める |These are fun projects to help solidify some JS fundamentals.|
 | versatile | 用途が広い |Callbacks are versatile.|
+| argument | 引数 |The method takes as an argument a callback.|
+| terminology | 用語 |Technical terminology|
+| recap | 要約 / おさらい |Would you recap for me?|
