@@ -20,3 +20,4 @@
 | argument | 引数 |The method takes as an argument a callback.|
 | terminology | 用語 |Technical terminology|
 | recap | 要約 / おさらい |Would you recap for me?|
+| syntactic sugar | 糖衣構文 |These features basically act as syntactic sugar on top of promises.|
