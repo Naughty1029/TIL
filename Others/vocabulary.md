@@ -23,5 +23,4 @@
 | syntactic sugar | 糖衣構文 |These features basically act as syntactic sugar on top of promises.|
 | Pitfalls | 落とし穴 |Known pitfalls with Linux 2.6 migration.|
 | recursive | 再帰的な |There is a difference between recursive setTimeout() and setInterval().|
-| compatibility　| 互換性 |Browser compatibility
-|
+| compatibility　| 互換性 |Browser compatibility|
