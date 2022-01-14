@@ -24,7 +24,8 @@
 ### [Dev Community](https://dev.to/)
 Qiitaの英語版みたいなサイト　　
 
-
+### [The Mozilla Blog](https://blog.mozilla.org/en/)
+Mozillaのブログ
 
 ## ツール系
 

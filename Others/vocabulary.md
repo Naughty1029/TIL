@@ -24,3 +24,6 @@
 | Pitfalls | 落とし穴 |Known pitfalls with Linux 2.6 migration.|
 | recursive | 再帰的な |There is a difference between recursive setTimeout() and setInterval().|
 | compatibility　| 互換性 |Browser compatibility|
+| conditional rendering　| 条件付きレンダリング |We can clean this up by using conditional rendering.|
+| robust　| 強健な・強固な |More robust focus management|
+| pseudo　| 擬似 |What are Pseudo-Elements in CSS?|
