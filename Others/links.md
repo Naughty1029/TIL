@@ -27,6 +27,9 @@ Qiitaの英語版みたいなサイト　　
 ### [The Mozilla Blog](https://blog.mozilla.org/en/)
 Mozillaのブログ
 
+### [Better Dev Link](https://betterdev.link/)
+何か新しいことを学ぶのに役立つことを目的としたウェブ上のリンク集
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
