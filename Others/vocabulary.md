@@ -27,3 +27,4 @@
 | conditional rendering　| 条件付きレンダリング |We can clean this up by using conditional rendering.|
 | robust　| 強健な・強固な |More robust focus management|
 | pseudo　| 擬似 |What are Pseudo-Elements in CSS?|
+| every other week　| 隔週 |I write articles every other week|
