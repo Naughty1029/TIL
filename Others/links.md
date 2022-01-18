@@ -30,6 +30,10 @@ Mozillaのブログ
 ### [Better Dev Link](https://betterdev.link/)
 何か新しいことを学ぶのに役立つことを目的としたウェブ上のリンク集
 
+
+https://dev.to/render/git-organized-a-better-git-flow-56go
+
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
