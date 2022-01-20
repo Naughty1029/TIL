@@ -35,6 +35,8 @@ https://dev.to/render/git-organized-a-better-git-flow-56go
 
 https://dev.to/teekay/frontend-challenges-front-end-engineer-assignment-15np
 
+https://seleck.cc/630
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
