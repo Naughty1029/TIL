@@ -37,6 +37,8 @@ https://dev.to/teekay/frontend-challenges-front-end-engineer-assignment-15np
 
 https://seleck.cc/630
 
+https://dev.classmethod.jp/articles/check-all-watching-github-repos/
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
