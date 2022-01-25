@@ -39,6 +39,8 @@ https://seleck.cc/630
 
 https://dev.classmethod.jp/articles/check-all-watching-github-repos/
 
+https://qiita.com/shalin/items/f6002d975cf580a06527
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
