@@ -41,6 +41,8 @@ https://dev.classmethod.jp/articles/check-all-watching-github-repos/
 
 https://qiita.com/shalin/items/f6002d975cf580a06527
 
+https://github.com/mitsuruog/clean-code-javascript
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
