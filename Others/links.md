@@ -43,6 +43,8 @@ https://qiita.com/shalin/items/f6002d975cf580a06527
 
 https://github.com/mitsuruog/clean-code-javascript
 
+https://dev.to/seths10/10-github-repositories-you-should-know-1ce7
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
