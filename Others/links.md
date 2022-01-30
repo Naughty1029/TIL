@@ -45,6 +45,8 @@ https://github.com/mitsuruog/clean-code-javascript
 
 https://dev.to/seths10/10-github-repositories-you-should-know-1ce7
 
+https://dev.to/madza/17-killer-websites-you-should-use-to-increase-productivity-2enk
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
