@@ -47,6 +47,8 @@ https://dev.to/seths10/10-github-repositories-you-should-know-1ce7
 
 https://dev.to/madza/17-killer-websites-you-should-use-to-increase-productivity-2enk
 
+https://www.codegrid.net/articles/2017-atomic-design-1/
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
