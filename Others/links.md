@@ -50,6 +50,8 @@ https://dev.to/madza/17-killer-websites-you-should-use-to-increase-productivity-
 Atomic Designとは何か
 https://www.codegrid.net/articles/2017-atomic-design-1/
 
+https://dev.to/iainfreestone/10-trending-projects-on-github-for-web-developers-28th-january-2022-4hf3
+
 ## ツール系
 
 ### [DeepL](https://www.deepl.com/ja/translator)
