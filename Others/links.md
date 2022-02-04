@@ -67,4 +67,6 @@ https://dev.to/iainfreestone/10-trending-projects-on-github-for-web-developers-2
 - [docker hub](https://hub.docker.com/)
 - [入門Docker](https://y-ohgi.com/introduction-docker/)
 
-test
+
+memo
+[Git でユーザー名とメールアドレスを設定する方法（全体用とプロジェクト用）](https://laboradian.com/set-git-user-and-email/)
