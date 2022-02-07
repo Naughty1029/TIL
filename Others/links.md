@@ -70,3 +70,5 @@ https://dev.to/iainfreestone/10-trending-projects-on-github-for-web-developers-2
 
 memo
 [Git でユーザー名とメールアドレスを設定する方法（全体用とプロジェクト用）](https://laboradian.com/set-git-user-and-email/)
+
+[JsonPlaceHolder](https://jsonplaceholder.typicode.com/)
