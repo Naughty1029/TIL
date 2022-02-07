@@ -4,13 +4,16 @@ import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/organisms/user/UserCard";
 import { DefaultLayout } from "./components/templates/DefaultLayout";
+import { UserProvider } from "./providers/UserProvider";
 import { Router } from "./router/Router";
 
 import "./styles.css";
 
 function App() {
   return (
-    <Router />
+    <UserProvider>
+      <Router />
+    </UserProvider>
   );
 }
 
