@@ -19,8 +19,7 @@ elems = soup.find_all(href=re.compile("news.yahoo.co.jp/pickup"))
 #     print(elem.contents[0])
 #     print(elem.attrs["href"])
 
-
-path = './test.txt'
+path = "./test.txt"
 
 #追記はaタグ
 with open(path, mode='w') as f:

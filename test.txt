@@ -1,4 +1,0 @@
-This is Test-Text.
-
-
-これは追加テキストです。
