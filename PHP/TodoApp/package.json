@@ -19,7 +19,10 @@
         "react-dom": "^17.0.2",
         "react-query": "^3.34.15",
         "react-router-dom": "^5.2.0",
+<<<<<<< HEAD
         "react-toastify": "^8.1.1",
+=======
+>>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.49.7",
         "sass-loader": "^12.4.0",
