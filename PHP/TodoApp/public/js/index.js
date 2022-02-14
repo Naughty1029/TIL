@@ -2077,7 +2077,6 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 var router_1 = __importDefault(__webpack_require__(/*! ./router */ "./resources/ts/router.tsx"));
 
-<<<<<<< HEAD
 var react_toastify_1 = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 
 __webpack_require__(/*! react-toastify/dist/ReactToastify.css */ "./node_modules/react-toastify/dist/ReactToastify.css");
@@ -2086,10 +2085,6 @@ var App = function App() {
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(router_1["default"], null), react_1["default"].createElement(react_toastify_1.ToastContainer, {
     hideProgressBar: true
   }));
-=======
-var App = function App() {
-  return react_1["default"].createElement(router_1["default"], null);
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 };
 
 exports["default"] = App;
@@ -2206,7 +2201,6 @@ exports["default"] = LoginPage;
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./resources/ts/pages/tasks/components/TaskInput.tsx":
 /*!***********************************************************!*\
   !*** ./resources/ts/pages/tasks/components/TaskInput.tsx ***!
@@ -2437,12 +2431,6 @@ exports["default"] = TaskItem;
 /*!**********************************************************!*\
   !*** ./resources/ts/pages/tasks/components/TaskList.tsx ***!
   \**********************************************************/
-=======
-/***/ "./resources/ts/pages/tasks/index.tsx":
-/*!********************************************!*\
-  !*** ./resources/ts/pages/tasks/index.tsx ***!
-  \********************************************/
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -2508,13 +2496,9 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 
 var axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/axios/index.js"));
 
-<<<<<<< HEAD
 var TaskItem_1 = __importDefault(__webpack_require__(/*! ./TaskItem */ "./resources/ts/pages/tasks/components/TaskItem.tsx"));
 
 var TaskList = function TaskList() {
-=======
-var TaskPage = function TaskPage() {
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
   var _ref = (0, react_1.useState)([]),
       _ref2 = _slicedToArray(_ref, 2),
       tasks = _ref2[0],
@@ -2529,43 +2513,15 @@ var TaskPage = function TaskPage() {
   (0, react_1.useEffect)(function () {
     getTasks();
   }, []);
-<<<<<<< HEAD
   return react_1["default"].createElement("div", {
-=======
-  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("form", {
-    className: "input-form"
-  }, react_1["default"].createElement("div", {
-    className: "inner"
-  }, react_1["default"].createElement("input", {
-    type: "text",
-    className: "input",
-    placeholder: "TODO\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
-    value: ""
-  }), react_1["default"].createElement("button", {
-    className: "btn is-primary"
-  }, "\u8FFD\u52A0"))), react_1["default"].createElement("div", {
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
     className: "inner"
   }, react_1["default"].createElement("ul", {
     className: "task-list"
   }, tasks.map(function (task) {
-<<<<<<< HEAD
     return react_1["default"].createElement(TaskItem_1["default"], {
       key: task.id,
       task: task
     });
-=======
-    return react_1["default"].createElement("li", {
-      key: task.id
-    }, react_1["default"].createElement("label", {
-      className: "checkbox-label"
-    }, react_1["default"].createElement("input", {
-      type: "checkbox",
-      className: "checkbox-input"
-    })), react_1["default"].createElement("div", null, react_1["default"].createElement("span", null, task.title)), react_1["default"].createElement("button", {
-      className: "btn is-delete"
-    }, "\u524A\u9664"));
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
   }), react_1["default"].createElement("li", null, react_1["default"].createElement("label", {
     className: "checkbox-label"
   }, react_1["default"].createElement("input", {
@@ -2600,7 +2556,6 @@ var TaskPage = function TaskPage() {
     className: "checkbox-input"
   })), react_1["default"].createElement("div", null, react_1["default"].createElement("span", null, "\u6383\u9664")), react_1["default"].createElement("button", {
     className: "btn is-delete"
-<<<<<<< HEAD
   }, "\u524A\u9664"))));
 };
 
@@ -2635,9 +2590,6 @@ var TaskList_1 = __importDefault(__webpack_require__(/*! ./components/TaskList *
 
 var TaskPage = function TaskPage() {
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(TaskInput_1["default"], null), react_1["default"].createElement(TaskList_1["default"], null));
-=======
-  }, "\u524A\u9664")))));
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 };
 
 exports["default"] = TaskPage;
@@ -2691,7 +2643,6 @@ var Router = function Router() {
   }, react_1["default"].createElement(tasks_1["default"], null))));
 };
 
-<<<<<<< HEAD
 exports["default"] = Router;
 
 /***/ }),
@@ -2848,21 +2799,6 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
-=======
-function Home() {
-  return react_1["default"].createElement("h2", null, "Home");
-}
-
-function About() {
-  return react_1["default"].createElement("h2", null, "About");
-}
-
-function Users() {
-  return react_1["default"].createElement("h2", null, "Users");
-}
-
-exports["default"] = Router;
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 
 /***/ }),
 
@@ -33348,7 +33284,6 @@ function pathToRegexp (path, keys, options) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/react-toastify/dist/react-toastify.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/react-toastify/dist/react-toastify.esm.js ***!
@@ -34786,8 +34721,6 @@ eventManager.on(2
 
 /***/ }),
 
-=======
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -38285,7 +38218,6 @@ if (false) {} else {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/react-toastify/dist/ReactToastify.css":
 /*!************************************************************!*\
   !*** ./node_modules/react-toastify/dist/ReactToastify.css ***!
@@ -38595,8 +38527,6 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-=======
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /***/ "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js ***!
@@ -38822,11 +38752,7 @@ function _setPrototypeOf(o, p) {
 /***/ ((module) => {
 
 "use strict";
-<<<<<<< HEAD
-module.exports = JSON.parse('{"_args":[["axios@0.21.4","/Users/watanabe_masahiro/Documents/study/TIL/PHP/TodoApp"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"/Users/watanabe_masahiro/Documents/study/TIL/PHP/TodoApp","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
-=======
 module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 
 /***/ })
 
@@ -38844,11 +38770,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-<<<<<<< HEAD
 /******/ 			id: moduleId,
-=======
-/******/ 			// no module.id needed
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};

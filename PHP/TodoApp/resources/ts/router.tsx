@@ -23,7 +23,6 @@ const Router = () => {
 
             <Switch>
                 <Route path="/help">
-<<<<<<< HEAD
                     <HelpPage />
                 </Route>
                 <Route path="/login">
@@ -31,15 +30,6 @@ const Router = () => {
                 </Route>
                 <Route path="/">
                     <TaskPage />
-=======
-                <HelpPage />
-                </Route>
-                <Route path="/login">
-                <LoginPage />
-                </Route>
-                <Route path="/">
-                <TaskPage />
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
                 </Route>
             </Switch>
         </BrowserRouter>
