@@ -29,14 +29,16 @@ class TaskController extends Controller
         //
     }
 
-    public function update(TaskRequest $request, Task $task)
+    public function update(TaskRequest $request,$id)
     {
+        $task = Task::findOrFail($id);
         $task->title = $request->title;
         return $task->update() ? response()->json($task) : response()->json([],500);
     }
 
-    public function destroy(Task $task)
+    public function destroy($id)
     {
+        $task = Task::findOrFail($id);
         return $task->delete() ? response()->json($task) : response()->json([],500);
     }
 

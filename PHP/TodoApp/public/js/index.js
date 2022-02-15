@@ -2077,22 +2077,112 @@ var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/r
 
 var router_1 = __importDefault(__webpack_require__(/*! ./router */ "./resources/ts/router.tsx"));
 
-<<<<<<< HEAD
 var react_toastify_1 = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 
 __webpack_require__(/*! react-toastify/dist/ReactToastify.css */ "./node_modules/react-toastify/dist/ReactToastify.css");
 
+var AuthContext_1 = __webpack_require__(/*! ./hooks/AuthContext */ "./resources/ts/hooks/AuthContext.tsx");
+
 var App = function App() {
-  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(router_1["default"], null), react_1["default"].createElement(react_toastify_1.ToastContainer, {
+  return react_1["default"].createElement(AuthContext_1.AuthProvider, null, react_1["default"].createElement(router_1["default"], null), react_1["default"].createElement(react_toastify_1.ToastContainer, {
     hideProgressBar: true
   }));
-=======
-var App = function App() {
-  return react_1["default"].createElement(router_1["default"], null);
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 };
 
 exports["default"] = App;
+
+/***/ }),
+
+/***/ "./resources/ts/hooks/AuthContext.tsx":
+/*!********************************************!*\
+  !*** ./resources/ts/hooks/AuthContext.tsx ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.useAuth = exports.AuthProvider = void 0;
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var AuthContext = (0, react_1.createContext)({
+  isAuth: false,
+  setIsAuth: function setIsAuth() {}
+});
+
+var AuthProvider = function AuthProvider(_ref) {
+  var children = _ref.children;
+
+  var _ref2 = (0, react_1.useState)(false),
+      _ref3 = _slicedToArray(_ref2, 2),
+      isAuth = _ref3[0],
+      setIsAuth = _ref3[1];
+
+  return react_1["default"].createElement(AuthContext.Provider, {
+    value: {
+      isAuth: isAuth,
+      setIsAuth: setIsAuth
+    }
+  }, children);
+};
+
+exports.AuthProvider = AuthProvider;
+
+var useAuth = function useAuth() {
+  return (0, react_1.useContext)(AuthContext);
+};
+
+exports.useAuth = useAuth;
 
 /***/ }),
 
@@ -2122,6 +2212,37 @@ var react_dom_1 = __importDefault(__webpack_require__(/*! react-dom */ "./node_m
 var App_1 = __importDefault(__webpack_require__(/*! ./App */ "./resources/ts/App.tsx"));
 
 react_dom_1["default"].render(react_1["default"].createElement(App_1["default"], null), document.getElementById("app"));
+
+/***/ }),
+
+/***/ "./resources/ts/pages/error/index.tsx":
+/*!********************************************!*\
+  !*** ./resources/ts/pages/error/index.tsx ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var NotFoundPage = function NotFoundPage() {
+  return react_1["default"].createElement("div", {
+    className: "align-center"
+  }, react_1["default"].createElement("h1", null, "404 NotFound"), react_1["default"].createElement("p", null, "\u304A\u63A2\u3057\u306E\u30DA\u30FC\u30B8\u306F\u898B\u3064\u304B\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u3002"));
+};
+
+exports["default"] = NotFoundPage;
 
 /***/ }),
 
@@ -2165,6 +2286,52 @@ exports["default"] = HelpPage;
 "use strict";
 
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
 var __importDefault = this && this.__importDefault || function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
@@ -2175,30 +2342,71 @@ Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/axios/index.js"));
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+var AuthContext_1 = __webpack_require__(/*! ../../hooks/AuthContext */ "./resources/ts/hooks/AuthContext.tsx");
 
 var LoginPage = function LoginPage() {
+  var _ref = (0, react_1.useState)('admin@example.com'),
+      _ref2 = _slicedToArray(_ref, 2),
+      email = _ref2[0],
+      setEmail = _ref2[1];
+
+  var _ref3 = (0, react_1.useState)('12345678'),
+      _ref4 = _slicedToArray(_ref3, 2),
+      password = _ref4[0],
+      setPassWord = _ref4[1];
+
+  var _ref5 = (0, AuthContext_1.useAuth)(),
+      setIsAuth = _ref5.setIsAuth;
+
+  var handleLogin = function handleLogin(e) {
+    e.preventDefault();
+    axios_1["default"].post('/api/login', {
+      email: email,
+      password: password
+    }).then(function (res) {
+      if (res.status === 200) {
+        setIsAuth(true);
+      }
+    });
+  };
+
   return react_1["default"].createElement("div", {
     className: "login-page"
   }, react_1["default"].createElement("div", {
     className: "login-panel"
-  }, react_1["default"].createElement("form", null, react_1["default"].createElement("div", {
+  }, react_1["default"].createElement("form", {
+    onSubmit: handleLogin
+  }, react_1["default"].createElement("div", {
     className: "input-group"
   }, react_1["default"].createElement("label", null, "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9"), react_1["default"].createElement("input", {
     type: "email",
-    className: "input"
+    className: "input",
+    value: email,
+    onChange: function onChange(e) {
+      return setEmail(e.target.value);
+    }
   })), react_1["default"].createElement("div", {
     className: "input-group"
   }, react_1["default"].createElement("label", null, "\u30D1\u30B9\u30EF\u30FC\u30C9"), react_1["default"].createElement("input", {
     type: "password",
-    className: "input"
+    className: "input",
+    value: password,
+    onChange: function onChange(e) {
+      return setPassWord(e.target.value);
+    }
   })), react_1["default"].createElement("button", {
     type: "submit",
     className: "btn"
   }, "\u30ED\u30B0\u30A4\u30F3"))), react_1["default"].createElement("div", {
     className: "links"
-  }, react_1["default"].createElement("a", {
-    href: "#"
+  }, react_1["default"].createElement(react_router_dom_1.Link, {
+    to: "/help"
   }, "\u30D8\u30EB\u30D7")));
 };
 
@@ -2206,7 +2414,6 @@ exports["default"] = LoginPage;
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./resources/ts/pages/tasks/components/TaskInput.tsx":
 /*!***********************************************************!*\
   !*** ./resources/ts/pages/tasks/components/TaskInput.tsx ***!
@@ -2278,11 +2485,13 @@ var axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/a
 
 var react_toastify_1 = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 
-var TaskInput = function TaskInput() {
-  var _ref = (0, react_1.useState)(''),
-      _ref2 = _slicedToArray(_ref, 2),
-      title = _ref2[0],
-      setTitle = _ref2[1];
+var TaskInput = function TaskInput(_ref) {
+  var updateTitle = _ref.updateTitle;
+
+  var _ref2 = (0, react_1.useState)(''),
+      _ref3 = _slicedToArray(_ref2, 2),
+      title = _ref3[0],
+      setTitle = _ref3[1];
 
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
@@ -2293,10 +2502,21 @@ var TaskInput = function TaskInput() {
     axios_1["default"].post("api/tasks", {
       title: title
     }).then(function (res) {
+      updateTitle(title);
       setTitle('');
       react_toastify_1.toast.success('登録に成功しました');
     })["catch"](function (error) {
-      react_toastify_1.toast.error('登録に失敗しました');
+      var _a, _b;
+
+      if ((_a = error.response) === null || _a === void 0 ? void 0 : _a.data.errors) {
+        Object.values((_b = error.response) === null || _b === void 0 ? void 0 : _b.data.errors).map(function (messages) {
+          messages.map(function (message) {
+            react_toastify_1.toast.error(message);
+          });
+        });
+      } else {
+        react_toastify_1.toast.error('登録に失敗しました');
+      }
     });
     ;
   };
@@ -2395,12 +2615,21 @@ var axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/a
 var react_toastify_1 = __webpack_require__(/*! react-toastify */ "./node_modules/react-toastify/dist/react-toastify.esm.js");
 
 var TaskItem = function TaskItem(_ref) {
-  var task = _ref.task;
+  var index = _ref.index,
+      task = _ref.task,
+      updateTasks = _ref.updateTasks;
+  console.log(index);
 
   var _ref2 = (0, react_1.useState)(task),
       _ref3 = _slicedToArray(_ref2, 2),
       tasks = _ref3[0],
       setTasks = _ref3[1];
+
+  var _ref4 = (0, react_1.useState)(undefined),
+      _ref5 = _slicedToArray(_ref4, 2),
+      editTitle = _ref5[0],
+      setEditTitle = _ref5[1]; //チェックボタン用
+
 
   var updateDoneTask = function updateDoneTask(id, is_done) {
     axios_1["default"].patch("api/tasks/update-done/".concat(id), {
@@ -2411,6 +2640,88 @@ var TaskItem = function TaskItem(_ref) {
       react_toastify_1.toast.error('更新に失敗しました');
     });
     ;
+  }; //編集用
+
+
+  var updateTask = function updateTask(id, task) {
+    axios_1["default"].put("api/tasks/".concat(id), task).then(function (res) {
+      setTasks(res.data);
+      react_toastify_1.toast.success('更新に成功しました');
+    })["catch"](function (error) {
+      react_toastify_1.toast.error('更新に失敗しました');
+    });
+    ;
+  }; //削除用
+
+
+  var deleteTask = function deleteTask(id) {
+    axios_1["default"]["delete"]("api/tasks/".concat(id)).then(function (res) {
+      updateTasks(index);
+      react_toastify_1.toast.success('削除に成功しました');
+    })["catch"](function (error) {
+      react_toastify_1.toast.error('削除に失敗しました');
+    });
+    ;
+  }; //タイトルが切り替わる処理
+
+
+  var handleToggleEdit = function handleToggleEdit() {
+    setEditTitle(tasks.title);
+  }; //stateの更新
+
+
+  var handleInputChange = function handleInputChange(e) {
+    setEditTitle(e.target.value);
+  }; //更新ボタンを押下時に更新する
+
+
+  var handleUpdate = function handleUpdate(e) {
+    e.preventDefault();
+
+    if (!editTitle) {
+      react_toastify_1.toast.error('タイトルを入力してください');
+      return;
+    }
+
+    var newTask = Object.assign({}, tasks);
+    newTask.title = editTitle;
+    updateTask(tasks.id, newTask);
+    setEditTitle(undefined);
+  }; //入力フォームを抜ける処理
+
+
+  var handleOnKey = function handleOnKey(e) {
+    if (['Escape', 'Tab'].includes(e.key)) {
+      setEditTitle(undefined);
+    }
+  }; //タイトル入力フォーム出力
+
+
+  var itemInput = function itemInput() {
+    return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("form", {
+      onSubmit: handleUpdate
+    }, react_1["default"].createElement("input", {
+      type: "text",
+      className: "input",
+      defaultValue: tasks.title,
+      onChange: handleInputChange,
+      onKeyDown: handleOnKey
+    })), react_1["default"].createElement("button", {
+      className: "btn",
+      onClick: handleUpdate
+    }, "\u66F4\u65B0"));
+  }; //タイトルを出力
+
+
+  var itemText = function itemText() {
+    return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
+      onClick: handleToggleEdit
+    }, react_1["default"].createElement("span", null, tasks.title)), react_1["default"].createElement("button", {
+      className: "btn is-delete",
+      onClick: function onClick() {
+        return deleteTask(tasks.id);
+      }
+    }, "\u524A\u9664"));
   };
 
   return react_1["default"].createElement("li", {
@@ -2424,9 +2735,7 @@ var TaskItem = function TaskItem(_ref) {
     onClick: function onClick() {
       return updateDoneTask(tasks.id, tasks.is_done);
     }
-  })), react_1["default"].createElement("div", null, react_1["default"].createElement("span", null, tasks.title)), react_1["default"].createElement("button", {
-    className: "btn is-delete"
-  }, "\u524A\u9664"));
+  })), editTitle === undefined ? itemText() : itemInput());
 };
 
 exports["default"] = TaskItem;
@@ -2437,12 +2746,129 @@ exports["default"] = TaskItem;
 /*!**********************************************************!*\
   !*** ./resources/ts/pages/tasks/components/TaskList.tsx ***!
   \**********************************************************/
-=======
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function get() {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+  }
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/axios/index.js"));
+
+var TaskItem_1 = __importDefault(__webpack_require__(/*! ./TaskItem */ "./resources/ts/pages/tasks/components/TaskItem.tsx"));
+
+var TaskList = function TaskList(_ref) {
+  var title = _ref.title;
+
+  var _ref2 = (0, react_1.useState)([]),
+      _ref3 = _slicedToArray(_ref2, 2),
+      tasks = _ref3[0],
+      setTasks = _ref3[1]; //削除時の再描画用
+
+
+  var updateTasks = function updateTasks(index) {
+    var newTasks = _toConsumableArray(tasks);
+
+    newTasks.splice(index, 1);
+    setTasks(newTasks);
+  }; //1番最初の描画用
+
+
+  var getTasks = function getTasks() {
+    axios_1["default"].get('api/tasks').then(function (res) {
+      setTasks(res.data);
+    });
+  };
+
+  (0, react_1.useEffect)(function () {
+    getTasks();
+  }, [title]);
+  return react_1["default"].createElement("div", {
+    className: "inner"
+  }, react_1["default"].createElement("ul", {
+    className: "task-list"
+  }, tasks.map(function (task, index) {
+    return react_1["default"].createElement(TaskItem_1["default"], {
+      key: task.id,
+      index: index,
+      task: task,
+      updateTasks: updateTasks
+    });
+  })));
+};
+
+exports["default"] = TaskList;
+
+/***/ }),
+
 /***/ "./resources/ts/pages/tasks/index.tsx":
 /*!********************************************!*\
   !*** ./resources/ts/pages/tasks/index.tsx ***!
   \********************************************/
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
@@ -2506,138 +2932,26 @@ Object.defineProperty(exports, "__esModule", ({
 
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/axios/index.js"));
-
-<<<<<<< HEAD
-var TaskItem_1 = __importDefault(__webpack_require__(/*! ./TaskItem */ "./resources/ts/pages/tasks/components/TaskItem.tsx"));
-
-var TaskList = function TaskList() {
-=======
-var TaskPage = function TaskPage() {
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
-  var _ref = (0, react_1.useState)([]),
-      _ref2 = _slicedToArray(_ref, 2),
-      tasks = _ref2[0],
-      setTasks = _ref2[1];
-
-  var getTasks = function getTasks() {
-    axios_1["default"].get('api/tasks').then(function (res) {
-      setTasks(res.data);
-    });
-  };
-
-  (0, react_1.useEffect)(function () {
-    getTasks();
-  }, []);
-<<<<<<< HEAD
-  return react_1["default"].createElement("div", {
-=======
-  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("form", {
-    className: "input-form"
-  }, react_1["default"].createElement("div", {
-    className: "inner"
-  }, react_1["default"].createElement("input", {
-    type: "text",
-    className: "input",
-    placeholder: "TODO\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
-    value: ""
-  }), react_1["default"].createElement("button", {
-    className: "btn is-primary"
-  }, "\u8FFD\u52A0"))), react_1["default"].createElement("div", {
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
-    className: "inner"
-  }, react_1["default"].createElement("ul", {
-    className: "task-list"
-  }, tasks.map(function (task) {
-<<<<<<< HEAD
-    return react_1["default"].createElement(TaskItem_1["default"], {
-      key: task.id,
-      task: task
-    });
-=======
-    return react_1["default"].createElement("li", {
-      key: task.id
-    }, react_1["default"].createElement("label", {
-      className: "checkbox-label"
-    }, react_1["default"].createElement("input", {
-      type: "checkbox",
-      className: "checkbox-input"
-    })), react_1["default"].createElement("div", null, react_1["default"].createElement("span", null, task.title)), react_1["default"].createElement("button", {
-      className: "btn is-delete"
-    }, "\u524A\u9664"));
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
-  }), react_1["default"].createElement("li", null, react_1["default"].createElement("label", {
-    className: "checkbox-label"
-  }, react_1["default"].createElement("input", {
-    type: "checkbox",
-    className: "checkbox-input"
-  })), react_1["default"].createElement("form", null, react_1["default"].createElement("input", {
-    type: "text",
-    className: "input",
-    value: "\u7DE8\u96C6\u4E2D\u306ETODO"
-  })), react_1["default"].createElement("button", {
-    className: "btn"
-  }, "\u66F4\u65B0")), react_1["default"].createElement("li", {
-    className: "done"
-  }, react_1["default"].createElement("label", {
-    className: "checkbox-label"
-  }, react_1["default"].createElement("input", {
-    type: "checkbox",
-    className: "checkbox-input"
-  })), react_1["default"].createElement("div", null, react_1["default"].createElement("span", null, "\u5B9F\u884C\u3057\u305FTODO")), react_1["default"].createElement("button", {
-    className: "btn is-delete"
-  }, "\u524A\u9664")), react_1["default"].createElement("li", null, react_1["default"].createElement("label", {
-    className: "checkbox-label"
-  }, react_1["default"].createElement("input", {
-    type: "checkbox",
-    className: "checkbox-input"
-  })), react_1["default"].createElement("div", null, react_1["default"].createElement("span", null, "\u30B4\u30DF\u6368\u3066")), react_1["default"].createElement("button", {
-    className: "btn is-delete"
-  }, "\u524A\u9664")), react_1["default"].createElement("li", null, react_1["default"].createElement("label", {
-    className: "checkbox-label"
-  }, react_1["default"].createElement("input", {
-    type: "checkbox",
-    className: "checkbox-input"
-  })), react_1["default"].createElement("div", null, react_1["default"].createElement("span", null, "\u6383\u9664")), react_1["default"].createElement("button", {
-    className: "btn is-delete"
-<<<<<<< HEAD
-  }, "\u524A\u9664"))));
-};
-
-exports["default"] = TaskList;
-
-/***/ }),
-
-/***/ "./resources/ts/pages/tasks/index.tsx":
-/*!********************************************!*\
-  !*** ./resources/ts/pages/tasks/index.tsx ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
 var TaskInput_1 = __importDefault(__webpack_require__(/*! ./components/TaskInput */ "./resources/ts/pages/tasks/components/TaskInput.tsx"));
 
 var TaskList_1 = __importDefault(__webpack_require__(/*! ./components/TaskList */ "./resources/ts/pages/tasks/components/TaskList.tsx"));
 
 var TaskPage = function TaskPage() {
-  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(TaskInput_1["default"], null), react_1["default"].createElement(TaskList_1["default"], null));
-=======
-  }, "\u524A\u9664")))));
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
+  var _ref = (0, react_1.useState)(''),
+      _ref2 = _slicedToArray(_ref, 2),
+      title = _ref2[0],
+      setTitle = _ref2[1];
+
+  var updateTitle = function updateTitle(text) {
+    setTitle(text);
+    setTitle('');
+  };
+
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(TaskInput_1["default"], {
+    updateTitle: updateTitle
+  }), react_1["default"].createElement(TaskList_1["default"], {
+    title: title
+  }));
 };
 
 exports["default"] = TaskPage;
@@ -2673,25 +2987,67 @@ var login_1 = __importDefault(__webpack_require__(/*! ./pages/login */ "./resour
 
 var tasks_1 = __importDefault(__webpack_require__(/*! ./pages/tasks */ "./resources/ts/pages/tasks/index.tsx"));
 
+var axios_1 = __importDefault(__webpack_require__(/*! axios */ "./node_modules/axios/index.js"));
+
+var AuthContext_1 = __webpack_require__(/*! ./hooks/AuthContext */ "./resources/ts/hooks/AuthContext.tsx");
+
+var error_1 = __importDefault(__webpack_require__(/*! ./pages/error */ "./resources/ts/pages/error/index.tsx"));
+
 var Router = function Router() {
-  return react_1["default"].createElement(react_router_dom_1.BrowserRouter, null, react_1["default"].createElement("header", {
+  var _ref = (0, AuthContext_1.useAuth)(),
+      setIsAuth = _ref.setIsAuth,
+      isAuth = _ref.isAuth;
+
+  var GuardRoute = function GuardRoute(props) {
+    if (!isAuth) return react_1["default"].createElement(react_router_dom_1.Redirect, {
+      to: "/login"
+    });
+    return react_1["default"].createElement(react_router_dom_1.Route, Object.assign({}, props));
+  };
+
+  var LoginRoute = function LoginRoute(props) {
+    if (isAuth) return react_1["default"].createElement(react_router_dom_1.Redirect, {
+      to: "/"
+    });
+    return react_1["default"].createElement(react_router_dom_1.Route, Object.assign({}, props));
+  };
+
+  var handleLogout = function handleLogout() {
+    axios_1["default"].post('/api/logout').then(function (res) {
+      if (res.status === 200) {
+        setIsAuth(false);
+      }
+    });
+  };
+
+  var navigation = react_1["default"].createElement("header", {
     className: "global-head"
   }, react_1["default"].createElement("ul", null, react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
     to: "/"
   }, "\u30DB\u30FC\u30E0")), react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
     to: "/help"
+  }, "\u30D8\u30EB\u30D7")), react_1["default"].createElement("li", {
+    onClick: handleLogout
+  }, react_1["default"].createElement("span", null, "\u30ED\u30B0\u30A2\u30A6\u30C8"))));
+  var loginNavigation = react_1["default"].createElement("header", {
+    className: "global-head"
+  }, react_1["default"].createElement("ul", null, react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
+    to: "/help"
   }, "\u30D8\u30EB\u30D7")), react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
     to: "/login"
-  }, "\u30ED\u30B0\u30A4\u30F3")), react_1["default"].createElement("li", null, react_1["default"].createElement("span", null, "\u30ED\u30B0\u30A2\u30A6\u30C8")))), react_1["default"].createElement(react_router_dom_1.Switch, null, react_1["default"].createElement(react_router_dom_1.Route, {
+  }, "\u30ED\u30B0\u30A4\u30F3"))));
+  return react_1["default"].createElement(react_router_dom_1.BrowserRouter, null, isAuth ? navigation : loginNavigation, react_1["default"].createElement(react_router_dom_1.Switch, null, react_1["default"].createElement(react_router_dom_1.Route, {
     path: "/help"
-  }, react_1["default"].createElement(help_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
+  }, react_1["default"].createElement(help_1["default"], null)), react_1["default"].createElement(LoginRoute, {
     path: "/login"
-  }, react_1["default"].createElement(login_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
+  }, react_1["default"].createElement(login_1["default"], null)), react_1["default"].createElement(GuardRoute, {
+    exact: true,
     path: "/"
-  }, react_1["default"].createElement(tasks_1["default"], null))));
+  }, react_1["default"].createElement(tasks_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
+    component: error_1["default"]
+  })));
 };
 
-<<<<<<< HEAD
 exports["default"] = Router;
 
 /***/ }),
@@ -2848,21 +3204,6 @@ module.exports = function (cssWithMappingToString) {
 
   return list;
 };
-=======
-function Home() {
-  return react_1["default"].createElement("h2", null, "Home");
-}
-
-function About() {
-  return react_1["default"].createElement("h2", null, "About");
-}
-
-function Users() {
-  return react_1["default"].createElement("h2", null, "Users");
-}
-
-exports["default"] = Router;
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 
 /***/ }),
 
@@ -33348,7 +33689,6 @@ function pathToRegexp (path, keys, options) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/react-toastify/dist/react-toastify.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/react-toastify/dist/react-toastify.esm.js ***!
@@ -34786,8 +35126,6 @@ eventManager.on(2
 
 /***/ }),
 
-=======
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -38285,7 +38623,6 @@ if (false) {} else {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/react-toastify/dist/ReactToastify.css":
 /*!************************************************************!*\
   !*** ./node_modules/react-toastify/dist/ReactToastify.css ***!
@@ -38595,8 +38932,6 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-=======
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /***/ "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js ***!
@@ -38822,11 +39157,7 @@ function _setPrototypeOf(o, p) {
 /***/ ((module) => {
 
 "use strict";
-<<<<<<< HEAD
 module.exports = JSON.parse('{"_args":[["axios@0.21.4","/Users/watanabe_masahiro/Documents/study/TIL/PHP/TodoApp"]],"_development":true,"_from":"axios@0.21.4","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"axios@0.21.4","name":"axios","escapedName":"axios","rawSpec":"0.21.4","saveSpec":null,"fetchSpec":"0.21.4"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_spec":"0.21.4","_where":"/Users/watanabe_masahiro/Documents/study/TIL/PHP/TodoApp","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
-=======
-module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 
 /***/ })
 
@@ -38844,11 +39175,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-<<<<<<< HEAD
 /******/ 			id: moduleId,
-=======
-/******/ 			// no module.id needed
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};

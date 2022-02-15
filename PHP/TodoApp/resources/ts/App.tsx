@@ -1,21 +1,15 @@
 import React from "react";
 import Router from "./router";
-<<<<<<< HEAD
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthProvider } from "./hooks/AuthContext";
 
 const App:React.VFC = () => {
     return (
-        <>
+        <AuthProvider>
             <Router />
             <ToastContainer hideProgressBar={true} />
-        </>
-=======
-
-const App:React.VFC = () => {
-    return (
-        <Router />
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
+        </AuthProvider>
     )
 }
 

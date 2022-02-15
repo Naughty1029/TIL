@@ -3,63 +3,74 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Link
+  Link,
+  RouteProps,
+  Redirect
 } from "react-router-dom";
 import HelpPage from "./pages/help";
 import LoginPage from "./pages/login";
 import TaskPage from "./pages/tasks";
+import axios from "axios";
+import { useAuth } from "./hooks/AuthContext";
+import NotFoundPage from "./pages/error";
 
 const Router = () => {
+    const { setIsAuth,isAuth } = useAuth();
+
+    const GuardRoute = (props:RouteProps) => {
+        if(!isAuth) return <Redirect to="/login" />
+        return <Route {...props} />
+    }
+
+    const LoginRoute = (props:RouteProps) => {
+        if(isAuth) return <Redirect to="/" />
+        return <Route {...props} />
+    }
+
+    const handleLogout = () =>{
+        axios.post('/api/logout').then(res => {
+            if(res.status === 200){
+                setIsAuth(false);
+            }
+        })
+    }
+
+    const navigation = (
+        <header className="global-head">
+            <ul>
+                <li><Link to="/">ホーム</Link></li>
+                <li><Link to="/help">ヘルプ</Link></li>
+                <li onClick={handleLogout}><span>ログアウト</span></li>
+            </ul>
+        </header>
+    );
+
+    const loginNavigation = (
+        <header className="global-head">
+            <ul>
+                <li><Link to="/help">ヘルプ</Link></li>
+                <li><Link to="/login">ログイン</Link></li>
+            </ul>
+        </header>
+    );
+
     return (
         <BrowserRouter>
-            <header className="global-head">
-                <ul>
-                    <li><Link to="/">ホーム</Link></li>
-                    <li><Link to="/help">ヘルプ</Link></li>
-                    <li><Link to="/login">ログイン</Link></li>
-                    <li><span>ログアウト</span></li>
-                </ul>
-            </header>
-
+            {isAuth ? navigation : loginNavigation}
             <Switch>
                 <Route path="/help">
-<<<<<<< HEAD
                     <HelpPage />
                 </Route>
-                <Route path="/login">
+                <LoginRoute path="/login">
                     <LoginPage />
-                </Route>
-                <Route path="/">
+                </LoginRoute>
+                <GuardRoute exact path="/">
                     <TaskPage />
-=======
-                <HelpPage />
-                </Route>
-                <Route path="/login">
-                <LoginPage />
-                </Route>
-                <Route path="/">
-                <TaskPage />
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
-                </Route>
+                </GuardRoute>
+                <Route component={NotFoundPage} />
             </Switch>
         </BrowserRouter>
     )
 }
 
-<<<<<<< HEAD
-=======
-function Home() {
-    return <h2>Home</h2>;
-  }
-
-function About() {
-    return <h2>About</h2>;
-}
-
-function Users() {
-    return <h2>Users</h2>;
-}
-
-
->>>>>>> 845c6ad847a0eed516d49e7f08ae66f94e41cad2
 export default Router;

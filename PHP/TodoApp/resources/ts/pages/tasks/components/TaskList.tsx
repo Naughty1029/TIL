@@ -3,9 +3,17 @@ import axios from "axios";
 import { Task } from "../../../types/Task";
 import TaskItem from "./TaskItem";
 
-const TaskList:React.VFC = ()=> {
+const TaskList:React.VFC<{ title:string }>  = ({title})=> {
     const [tasks, setTasks] = useState<Task[]>([]);
 
+    //削除時の再描画用
+    const updateTasks = (index:number) => {
+        const newTasks = [...tasks];
+        newTasks.splice(index, 1);
+        setTasks(newTasks);
+    }
+
+    //1番最初の描画用
     const getTasks = () => {
         axios.get('api/tasks').then((res)=>{
             setTasks(res.data);
@@ -14,43 +22,14 @@ const TaskList:React.VFC = ()=> {
 
     useEffect(()=>{
         getTasks();
-    },[]);
+    },[title]);
 
     return (
         <div className="inner">
             <ul className="task-list">
-                { tasks.map( task => (
-                    <TaskItem key={task.id} task={task}/>
+                { tasks.map( (task,index) => (
+                    <TaskItem key={task.id} index={index} task={task} updateTasks={updateTasks}/>
                 ))}
-
-                <li>
-                    <label className="checkbox-label">
-                        <input type="checkbox" className="checkbox-input" />
-                    </label>
-                    <form><input type="text" className="input" value="編集中のTODO"></input></form>
-                    <button className="btn">更新</button>
-                </li>
-                <li className="done">
-                    <label className="checkbox-label">
-                        <input type="checkbox" className="checkbox-input" />
-                    </label>
-                    <div><span>実行したTODO</span></div>
-                    <button className="btn is-delete">削除</button>
-                </li>
-                <li>
-                    <label className="checkbox-label">
-                        <input type="checkbox" className="checkbox-input" />
-                    </label>
-                    <div><span>ゴミ捨て</span></div>
-                    <button className="btn is-delete">削除</button>
-                </li>
-                <li>
-                    <label className="checkbox-label">
-                        <input type="checkbox" className="checkbox-input" />
-                    </label>
-                    <div><span>掃除</span></div>
-                    <button className="btn is-delete">削除</button>
-                </li>
             </ul>
         </div>
     );
