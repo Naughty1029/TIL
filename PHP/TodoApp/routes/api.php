@@ -9,7 +9,7 @@ Route::post('logout',"LoginController@logout");
 
 Route::group(['middleware' => 'auth:sanctum'],function(){
     Route::apiResource("tasks","TaskController");
-    Route::patch("tasks/update-done/{task}","TaskController@updateDone");
+    Route::patch("tasks/update-done/{id}","TaskController@updateDone");
 
     Route::get('user', function (Request $request) {
         return $request->user();
