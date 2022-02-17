@@ -35,8 +35,15 @@
 // ObjectSample()
 
 //配列の型定義
-import arraySample from './array/array'
-import tupleSample from './array/tuple'
-arraySample()
+// import arraySample from './array/array'
+// import tupleSample from './array/tuple'
+// arraySample()
 
-tupleSample()
+// tupleSample()
+
+//ジェネリック型の定義
+// import genericsSample from "./generics/generics";
+// import genericsAdvancedSample from "./generics/advanced";
+// genericsSample()
+
+// genericsAdvancedSample()
