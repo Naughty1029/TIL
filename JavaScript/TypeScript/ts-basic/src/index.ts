@@ -47,3 +47,10 @@
 // genericsSample()
 
 // genericsAdvancedSample()
+
+//非同期処理
+import promiseSample from './async/promise'
+import callbackSample from './async/callback'
+// callbackSample()
+
+// promiseSample()
