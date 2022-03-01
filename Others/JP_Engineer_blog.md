@@ -6,3 +6,4 @@
 - [mebee](https://mebee.info/)
 - [退屈なエンジニアブログ](https://atsu-developer.net/)
 - [みかづきブログ・カスタム](https://blog.kimizuka.org/)
+- [rinoguchiブログ](https://rinoguchi.net/)
