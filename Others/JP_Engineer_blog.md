@@ -7,3 +7,5 @@
 - [退屈なエンジニアブログ](https://atsu-developer.net/)
 - [みかづきブログ・カスタム](https://blog.kimizuka.org/)
 - [rinoguchiブログ](https://rinoguchi.net/)
+- [YUMEMIブログ](https://note.yumemi.co.jp/)
+- [LINE Engineering](https://engineering.linecorp.com/ja/)
