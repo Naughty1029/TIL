@@ -1,3 +1,5 @@
+個人ブログです
+
 - [webOpixel](https://www.webopixel.net/)
 - [CONSOLE DOT LOG](https://blog.capilano-fw.com/)
 - [Laravel学習帳](https://laraweb.net/)
@@ -7,5 +9,4 @@
 - [退屈なエンジニアブログ](https://atsu-developer.net/)
 - [みかづきブログ・カスタム](https://blog.kimizuka.org/)
 - [rinoguchiブログ](https://rinoguchi.net/)
-- [YUMEMIブログ](https://note.yumemi.co.jp/)
-- [LINE Engineering](https://engineering.linecorp.com/ja/)
+- [webdesign leaves](https://www.webdesignleaves.com/)
