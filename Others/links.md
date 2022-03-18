@@ -14,6 +14,8 @@
 ### [Wesbos](https://wesbos.com/)
 無料（一部有料）のコンテンツを配信しているフルスタックエンジニアの方のサイト
 
+### [わくわかチャンネル](https://www.youtube.com/channel/UCiZjNcl9OYvSUGKl9MX4eIA)
+ITのことをわかりやすく解説してくれるYoutubeチャンネル
   
 
 ## 情報収集系
