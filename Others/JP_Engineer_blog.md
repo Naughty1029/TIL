@@ -30,19 +30,7 @@ URL
 [https://www.youtube.com/c/TheNetNinja/featured](https://www.youtube.com/c/TheNetNinja/featured)
 
 WEB開発に役立つチュートリアル動画。
-- Modern JavaScript (beginner to advanced)
-- Node.js
-- React
-- Vue.js
-- Firebase
-- MongoDB
-- HTML & CSS
-- PHP & MySQL
-- Laravel
-- React Native
-- Flutter
-
-など守備範囲ひろめ。英語です。
+守備範囲ひろめ。英語です。
 
 ### The Coding Train
 URL
