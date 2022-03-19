@@ -79,7 +79,7 @@ URL
 再生リストにあるIT初心者脱却講座がとてもおすすめ。
 ITリテラシーを高めるために必要な知識をとてもわかりやすく、かついい具合に深いところまで説明してくれています。
 
-## プログラミングアカデミー
+### プログラミングアカデミー
 URL
 [https://www.youtube.com/c/TheNetNinja/featured](https://www.youtube.com/c/TheNetNinja/featured)
 
