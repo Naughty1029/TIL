@@ -32,6 +32,8 @@ Mozillaのブログ
 ### [Better Dev Link](https://betterdev.link/)
 何か新しいことを学ぶのに役立つことを目的としたウェブ上のリンク集
 
+### [g2](https://www.g2.com/)
+b2bアプリケーション・サービスのマーケットプレイス
 
 https://dev.to/render/git-organized-a-better-git-flow-56go
 
