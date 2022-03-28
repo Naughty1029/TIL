@@ -7,9 +7,6 @@
 ### [freeCodeCamp](https://www.freecodecamp.org/)
 /news-pageにいくと8000以上のチュートリアルがある
 
-### [Udemy](https://www.udemy.com/)
-学習動画配信プラットフォーム
-
 ### [Wesbos](https://wesbos.com/)
 無料（一部有料）のコンテンツを配信しているフルスタックエンジニアの方のサイト
 
