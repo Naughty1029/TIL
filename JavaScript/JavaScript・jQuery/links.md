@@ -2,3 +2,5 @@
 - [水面の波紋を実装するためのjqueryプラグイン【jQuery Ripples】](https://arutega.jp/jquery-ripples/)
 - [[Javascript] Swiperで初期状態非表示にするとスワイプがぎこちなくなるバグの対処方法](https://qiita.com/jshimazu/items/21008eb26020bd0a24ff)
 - [【jQuery】スライダー（slick）で次の画像をチラ見せさせる方法](https://kata-tip.com/jquery-slick-01/)
+- [JavaScriptのアロー関数の省略記法について](https://qiita.com/deBroglieeeen/items/f146afd1cdf1e89c4121)
+- 
