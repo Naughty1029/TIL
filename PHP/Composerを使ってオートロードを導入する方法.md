@@ -153,4 +153,5 @@ $app->run();
 
 index.phpにアクセスするとHello Worldが表示されます。
 
-お疲れ様でした。
+## 参考記事
+- [PHPのオートロード(autoload)](https://qiita.com/atwata/items/5ba72d3d881a81227c2a)
