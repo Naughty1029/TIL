@@ -1,7 +1,3 @@
-# What Today I Learned...
-エンジニアリングをする上で役に立ちそうな英語系サイトをまとめる
-　　
-
 ## 学習系
 
 ### [freeCodeCamp](https://www.freecodecamp.org/)
