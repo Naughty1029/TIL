@@ -85,6 +85,15 @@ TypeScriptによる型チェックの設定を編集します。
 npm i -D husky lint-staged prettier
 ```
 
+.prettier.jsを作成する
+```
+module.exports = {
+    tabWidth: 4,
+    singleQuote: true,
+    semi: false,
+}
+```
+
 下記コマンドを実行
 ※huskyの設定方法がv7から変更になったようです。
 
