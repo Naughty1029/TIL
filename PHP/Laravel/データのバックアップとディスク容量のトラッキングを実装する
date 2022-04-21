@@ -1,0 +1,308 @@
+## 定期的なバックアップ
+### 使用ライブラリ
+spatie / laravel-backup
+- [github](https://github.com/spatie/laravel-backup/tree/main) 
+- [document](https://spatie.be/docs/laravel-backup/v8/introduction)
+
+### ライブラリの主な特徴
+- データベースやファイルのバックアップ生成
+- バックアップはzipにして保存してくれる
+- クリーンアップ設定可能
+- メール通知機能あり
+
+### composer インストール
+
+バージョンによって、PHPやLaravelの指定が異なるので注意
+```
+composer require "spatie/laravel-backup:6.*"
+```
+
+### 設定ファイル`config/backup.php`生成
+
+```
+php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
+```
+
+### 設定ファイルを編集
+
+```php:config/backup.php
+'source' => [
+
+    'files' => [
+    //バックアップを取りたいファイルを設定
+        'include' => [
+            base_path(),//特定のフォルダだけに変更することも可能
+            // base_path(/storage/app) みたいな感じで
+        ],
+    ],
+    
+    //**--省略--**//
+    
+    //バックアップの出力先設定
+    'destination' => [
+    　'disks' => [
+        　'local',// config/filesystems.phpに対応している
+    　],
+],
+
+    //**--省略--**//
+    
+//メール通知設定
+'mail' => [
+    'to' => 'your@example.com',
+
+    'from' => [
+        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'name' => env('MAIL_FROM_NAME', 'Example'),
+    ],
+],
+
+
+    //**--省略--**//
+    
+//クリーンアップ設定
+
+'cleanup' => [
+    'strategy' => \Spatie\Backup\Tasks\Cleanup\Strategies\DefaultStrategy::class,
+
+    'default_strategy' => [
+        'keep_all_backups_for_days' => 7,
+
+        'keep_daily_backups_for_days' => 16,
+
+        'keep_weekly_backups_for_weeks' => 8,
+
+        'keep_monthly_backups_for_months' => 4,
+
+        'keep_yearly_backups_for_years' => 2,
+
+        'delete_oldest_backups_when_using_more_megabytes_than' => 5000,
+    ],
+],
+
+```
+
+クリーンアップの設定はライブラリのルールがあるのでドキュメントで確認する
+https://spatie.be/docs/laravel-backup/v6/cleaning-up-old-backups/overview
+※これはバージョン6系統です
+
+### バックアップを作成する
+
+ソースファイルも全部
+```
+php artisan backup:run
+```
+
+通知機能無効オプション
+```
+php artisan backup:run --disable-notifications
+```
+
+DBのみバックアップ
+```
+php artisan backup:run --only-db
+```
+
+クリーンアップ
+```
+php artisan backup:clean
+```
+
+### 定期的なクーロン実行に対応させる
+app\Console\Kernel.php以下のscheduleメソッドにコマンドを記述
+
+```php:app\Console\Kernel.php
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('backup:clean')->daily();
+    $schedule->command('backup:run --only-db')->daily();
+}
+```
+**shellスクリプトを作成**
+```
+vim laravel.sh
+```
+```shell:laravel.sh
+#!/bin/bash
+/usr/local/bin/php /your-project-path/artisan schedule:run >> /dev/null 2>&1
+```
+
+**cronを設定する**
+```:crontab
+* * * * * /home/vagrant/laravel.sh
+```
+※上記毎分実行だが、Laravelは`app\Console\Kernel.php`のスケジュールメソッドないで実行感覚を設定する。
+
+タスクスケジュールの設定マニュアル
+- [Laravel 6.x タスクスケジュール](https://readouble.com/laravel/6.x/ja/scheduling.html)
+
+**shellスクリプトの実行権限**
+```
+chmod +x 権限をつけたいファイル名
+```
+- [シェルスクリプトを使う前に](https://qiita.com/sanstktkrsyhsk/items/ef88ddfb9fa8e7306e45)
+
+## ディスク容量のトラッキング
+[shellスクリプト](https://www.server-memo.net/tips/server-operation/diskcheck-script.html)を作ってもできる。今回はタスクスケジュール機能でひとまとめにできそうなので、オリジナルコマンドをLaravel内で作った。
+
+### コマンドファイル生成
+ディスク容量チェックのためのオリジナルコマンドファイルを生成
+```
+php artisan make:command CheckDisc
+```
+CheckDisc.phpを下記のように編集
+
+```php:app/Console/Commands/CheckDisc.php
+<?php
+
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\DiscAlert;
+
+class CheckDisc extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'command:checkdisc';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Command description';
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        # 監視パーティション
+        $partition_1='home_vagrant_code';
+        # ディスク使用率閾値(%)
+        $threshold = 70;
+
+        $d = shell_exec("df -h | grep $partition_1 | awk '{ print $5 }' | sed -e 's/.$//'");
+        $d = preg_replace("/\n/",'',$d);
+
+        if($d > $threshold){
+            $details = shell_exec("df -h | grep $partition_1");
+            Mail::to('masahiro.watanabe02@gmail.com')
+                ->send(new DiscAlert($details));
+        }
+    }
+}
+
+```
+
+パーテーションの値を間違えないように注意！
+上記だとディスク使用量が70％超えたらメールで通知するようにする。
+
+### メール機能追加
+実装方法の詳細を知りたいはドキュメントがおすすめ
+https://readouble.com/laravel/6.x/ja/mail.html
+
+**.envファイルにSMTP情報を追記**
+テスト環境では[MailTrap](https://mailtrap.io/)を使うといいかもしれません。
+
+```:.env
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=*******
+MAIL_PASSWORD=*******
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=from@example.com
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+**メール送信プログラム用のファイルを作成**
+
+```
+php artisan make:mail DiscAlert
+```
+
+DiscAlert.phpを下記のように編集
+
+```php:app/Mail/DiscAlert.php
+<?php
+
+namespace App\Mail;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+class DiscAlert extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    /**
+     * Create a new message instance.
+     *
+     * @return void
+     */
+    public function __construct($data)
+    {
+        //
+        $this->data = $data;
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->subject('ディスク容量アラート')   // メールのタイトル
+            ->text('emails.disc')            // テンプレートの呼び出し(平文テキスト)(HTMLメールはviewメソッド)
+            ->with(['data' => $this->data]); // withオプションでセットしたデータをテンプレートへ受け渡す
+
+    }
+}
+```
+
+メール本文の内容を書くためのbladeファイルを用意
+
+```php:resource/views/emails/disc.blade.php
+ディスク容量が70％を超えています。
+詳細を確認してください。
+
+{{$data}}
+```
+
+最後にタスクスケジュールに追加する
+
+```php:app/Console/Kernel.php
+protected function schedule(Schedule $schedule)
+{
+    $schedule->command('backup:clean')->daily();
+    $schedule->command('backup:run --only-db')->daily();
+    $schedule->command('command:checkdisc')->daily();//追記
+}
+```
+
+あとはメールが飛んでくるかなどチェックしておしまい。
+
+## 参考記事
+- [【Laravel】LaravelのソースもDBも簡単にバックアップが取れる「spatie/laravel-backup」](https://qiita.com/sola-msr/items/87205c592c47d12df1b0)
+- [ディスク監視スクリプト](https://www.server-memo.net/tips/server-operation/diskcheck-script.html)
