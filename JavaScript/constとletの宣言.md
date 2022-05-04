@@ -35,21 +35,21 @@ let val2 = "let変数を再宣言";
 console.log(val2);
 ```
 
-conts変数
+conts定数
 ```javascript
-const val3 = "const変数";
+const val3 = "const定数";
 console.log(val3);
 ```
 
-const変数は上書き不可
+const定数は上書き不可
 ```javascript
-val3 = "const変数を上書き";
+val3 = "const定数を上書き";
 console.log(val3);
 ```
 
-const変数を再宣言不可
+const定数を再宣言不可
 ```javascript
-const val3 = "const変数を再宣言";
+const val3 = "const定数を再宣言";
 console.log(val3);
 ```
 
