@@ -1,4 +1,4 @@
-ES２０１５以前の変数宣言はvarのみ
+ES2015以前の変数宣言はvarのみ
 
 ```javascript
 var val1 = "var変数";
