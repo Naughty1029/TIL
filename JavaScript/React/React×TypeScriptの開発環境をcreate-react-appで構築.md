@@ -28,7 +28,7 @@ npx create-react-app app --template typescript
 
 バージョン変えたい場合は適当なものへ変更しても可
 ```
-npm i react@17.0.2 react-dom@17.0.2
+npm i react@17.0.2 react-dom@17.0.2 @types/react@17.0.2 @types/react-dom@17.0.2
 ```
 
 下記コマンドで環境が立ち上がるので確認
