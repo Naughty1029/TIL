@@ -31,6 +31,27 @@ npx create-react-app app --template typescript
 npm i react@17.0.2 react-dom@17.0.2 @types/react@17.0.2 @types/react-dom@17.0.2
 ```
 
+version17.0.2のindex.tsxは下記のように記述する
+```javascript
+import { StrictMode } from "react";
+import ReactDom from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+ReactDom.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  document.getElementById("root")
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+```
+
 下記コマンドで環境が立ち上がるので確認
 ```
 npm run start
