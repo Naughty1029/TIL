@@ -106,13 +106,17 @@ TypeScriptによる型チェックの設定を編集します。
 npm i -D husky lint-staged prettier
 ```
 
-.prettier.jsを作成する
+.prettierrc.jsを作成する
 ```
 module.exports = {
-    tabWidth: 4,
-    singleQuote: true,
-    semi: false,
-}
+  singleQuote: true,
+  printWidth: 140,
+  trailingComma: 'all',
+  arrowParens: 'always',
+  semi: true,
+  endOfLine: 'lf',
+  tabWidth: 4,
+};
 ```
 
 下記コマンドを実行
