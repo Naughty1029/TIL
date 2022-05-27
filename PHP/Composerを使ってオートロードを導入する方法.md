@@ -130,8 +130,8 @@ class TestController
 └─ vendor ─ autoload.php
 │ 
 └─ app
-		└─ Models ─ TestModel.php
-		└─ Controllers ─ TestController.php
+	└─ Models ─ TestModel.php
+	└─ Controllers ─ TestController.php
 ```
 
  
