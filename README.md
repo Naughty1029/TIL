@@ -1,5 +1,5 @@
 
-![logo](https://raw.githubusercontent.com/Naughty1029/TIL/main/images/TOP/TIL-logo.jpg)
+![logo](https://raw.githubusercontent.com/Naughty1029/TIL/main/Images/TOP/TIL-logo.jpg)
 
 ## Overview
 This Repository is a record for my learning for programming.  
@@ -23,3 +23,6 @@ TODAY, WHAT I LEARNED?
 - [webpack](https://github.com/Naughty1029/TIL/tree/main/webpack)
 - [WordPress](https://github.com/Naughty1029/TIL/tree/main/WordPress)
 - [Others](https://github.com/Naughty1029/TIL/tree/main/Others)
+
+## Contributing
+If there are mistakes or a code that you think should be done this way more, please feel free to submit a pull request or issue.
