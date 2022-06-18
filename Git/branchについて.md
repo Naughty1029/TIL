@@ -7,5 +7,4 @@ git siwtch -c <ブランチ名> // ブランチ作成 + 切替
 git branch -d <ブランチ名> // ブランチの削除
 ```
 
-昔はcheckoutでブランチ切替していたが、機能が多すぎるという事で
-switchとrestoreの新コマンドが追加された
+昔はcheckoutでブランチ切替していたが、機能が多すぎるという事で、switchとrestoreの新コマンドが追加された
