@@ -41,5 +41,3 @@ git push // 取消コミットのプッシュ
 git reset --soft <commitID>
 git push -f // 強制プッシュ
 ```
-
-aaa
