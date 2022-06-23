@@ -42,5 +42,10 @@ git reset --soft <commitID>
 git push -f // 強制プッシュ
 ```
 
-## mergeしたプルリクを取り消したい
+## プルリクを取り消す
+プルリクエストを出したあとは、プルリクがclosedになる
+```
+git push --delete origin ブランチ名 //リモートブランチの削除
+```
 
+## mergeしたプルリクを取り消したい
