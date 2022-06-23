@@ -28,3 +28,16 @@ git reset --soft HEAD^ //ステージングの状態まで戻す
 git reset --mixed HEAD^ //コードを書いている状態に戻す
 git reset --hard HEAD^ //コードを書いたこと自体もなくなる
 ```
+
+## git pushを取り消したい
+コミット履歴を残す場合
+```
+git revert <commitID>
+git push // 取消コミットのプッシュ
+```
+
+コミット履歴を残さない場合
+```
+git reset --soft <commitID>
+git push -f // 強制プッシュ
+```
