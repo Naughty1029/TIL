@@ -21,3 +21,5 @@ git branch -vv
 ```
 git branch -u リモートリポジトリ名/ブランチ名
 ```
+
+main
