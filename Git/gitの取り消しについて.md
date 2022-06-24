@@ -48,3 +48,14 @@ git push -f // 強制プッシュ
 git push --delete origin ブランチ名 //リモートブランチの削除
 ```
 
+## ローカルマージを取り消す
+
+履歴を残す 
+```
+git revert -m 1 <コミットID>
+```
+
+履歴を残さない
+```
+git reset --hard ORIG_HEAD
+```
