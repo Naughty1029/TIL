@@ -38,29 +38,160 @@ useReducerとはstateを用意・管理するためのHooksです。
 https://www.webopixel.net/javascript/1647.html
 
 ### Childコンポーネントを作る
-![image](https://raw.githubusercontent.com/Naughty1029/TIL/main/Images/JavaScript/useReducer/no01.gif)
+App.tsx
+```javascript:App.tsx
+import "./styles.css";
+import { Child } from "./Child";
+
+export default function App() {
+  return (
+    <div className="App">
+      <Child />
+    </div>
+  );
+}
+```
+
+Child.tsx
+```javascript:Child.tsx
+import React from "react";
+
+export const Child: React.FC = () => {
+  return (
+    <div>
+      <h1>カウント:</h1>
+      <button>UP</button>
+      <button>DOWN</button>
+    </div>
+  );
+};
+```
 
 - App.tsxに配置するChildコンポーネントを定義
 - 数値を更新するためのボタンを設置しておく
 
 ### useReducerを定義する
-![image](https://raw.githubusercontent.com/Naughty1029/TIL/main/Images/JavaScript/useReducer/no02.gif)
+Child.tsx
+```javascript:Child.tsx
+import React, { useReducer } from "react";//追記
+
+const initialState = {//追記
+  count: 0
+};
+
+export const Child: React.FC = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);//追記
+  return (
+    <div>
+      <h1>カウント:{state.count}</h1>//追記
+      <button>UP</button>
+      <button>DOWN</button>
+    </div>
+  );
+};
+```
 
 - useReducerを定義する
 - useReducerの第二引数にわたす初期値をinitialStateとする
 - initialStateのcountプロパティとして0を定義
 
 ### reducer関数を定義する
-![image](https://raw.githubusercontent.com/Naughty1029/TIL/main/Images/JavaScript/useReducer/no03.gif)
+```javascript:Child.tsx
+import React, { useReducer } from "react";
+
+type State = {//追記
+  count: number;
+};
+
+type Action = { type: "INCREMENT" } | { type: "DECREMENT" };//追記
+
+const reducer = (state: State, action: Action) => {//追記
+  switch (action.type) {
+    case "INCREMENT":
+      return {
+        ...state,
+        count: state.count + 1
+      };
+
+    case "DECREMENT":
+      return {
+        ...state,
+        count: state.count - 1
+      };
+
+    default:
+      return state;
+  }
+};
+
+const initialState = {
+  count: 0
+};
+
+export const Child: React.FC = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <div>
+      <h1>カウント:{state.count}</h1>
+      <button>UP</button>
+      <button>DOWN</button>
+    </div>
+  );
+};
+```
 
 - reducer関数を定義し、引数にstateとactionをわたす
+- stateとactionの型定義をする
 - switch文を記述し、actionオブジェクトのtypeプロパティで分岐させる
 - typeプロパティが'INCREMENT'ならcountを1増やす
 - typeプロパティが'DECREMENT'ならcountを1減らす
 - 新しく更新したstateをreturnする
 
 ### dispatch関数を定義する
-![image](https://raw.githubusercontent.com/Naughty1029/TIL/main/Images/JavaScript/useReducer/no04.gif)
+Child.tsx
+```javascript:Child.tsx
+import React, { useReducer } from "react";
+
+type State = {
+  count: number;
+};
+
+type Action = { type: "INCREMENT" } | { type: "DECREMENT" };
+
+const reducer = (state: State, action: Action) => {
+  switch (action.type) {
+    case "INCREMENT":
+      return {
+        ...state,
+        count: state.count + 1
+      };
+
+    case "DECREMENT":
+      return {
+        ...state,
+        count: state.count - 1
+      };
+
+    default:
+      return state;
+  }
+};
+
+const initialState = {
+  count: 0
+};
+
+export const Child: React.FC = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <div>
+      <h1>カウント:{state.count}</h1>
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>UP</button>//追記
+      <button onClick={() => dispatch({ type: "DECREMENT" })}>DOWN</button>//追記
+    </div>
+  );
+};
+```
 
 - ボタンのクリックイベントでdispatch関数を発火させる
 - dispatch関数の引数にはactionオブジェクトとしてtypeプロパティを渡す
@@ -68,7 +199,7 @@ https://www.webopixel.net/javascript/1647.html
 - dispatch関数がreducer関数を呼び出すので、数値が更新される
 
 ## コードリンク先
-今回、gifにしたコードは下記リンクにあります。
+今回、gifにしたコードは下記リンクにあります。  
 https://codesandbox.io/s/usereducer-basic-6us96l
 
 
