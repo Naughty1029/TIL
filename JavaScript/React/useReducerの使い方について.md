@@ -1,5 +1,4 @@
 ### useReducerの概要理解
-![image](https://raw.githubusercontent.com/Naughty1029/TIL/main/Images/JavaScript/useReducer/usereducer.jpg)
 
 useReducerとはstateを用意・管理するためのHooksです。  
 主に以下3つの登場人物を理解する必要があります。  
@@ -39,7 +38,7 @@ https://www.webopixel.net/javascript/1647.html
 
 ### Childコンポーネントを作る
 App.tsx
-```javascript:App.tsx
+```javascript
 import "./styles.css";
 import { Child } from "./Child";
 
@@ -53,7 +52,7 @@ export default function App() {
 ```
 
 Child.tsx
-```javascript:Child.tsx
+```javascript
 import React from "react";
 
 export const Child: React.FC = () => {
@@ -72,7 +71,7 @@ export const Child: React.FC = () => {
 
 ### useReducerを定義する
 Child.tsx
-```javascript:Child.tsx
+```javascript
 import React, { useReducer } from "react";//追記
 
 const initialState = {//追記
@@ -96,7 +95,7 @@ export const Child: React.FC = () => {
 - initialStateのcountプロパティとして0を定義
 
 ### reducer関数を定義する
-```javascript:Child.tsx
+```javascript
 import React, { useReducer } from "react";
 
 type State = {//追記
@@ -149,7 +148,7 @@ export const Child: React.FC = () => {
 
 ### dispatch関数を定義する
 Child.tsx
-```javascript:Child.tsx
+```javascript
 import React, { useReducer } from "react";
 
 type State = {
