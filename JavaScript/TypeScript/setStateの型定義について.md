@@ -5,11 +5,11 @@ React.Dispatch<React.SetStateAction<number>>を使う　　
 ここにDispatchがどう絡むの？
 useState's type is actually:  
 
-```
+```javascript
 type UseState<S> = (action: S | ((prevState: S) => S)) => void;
 ```
 
-```
+```javascript
 import React, { useState } from "react";
 
 const Parent: React.FC = () => {
