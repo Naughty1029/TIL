@@ -22,7 +22,7 @@ Output: 1
 my Answer
 
 ```typescript
-var singleNumber = function (nums: number[]) {
+export const singleNumber = function (nums: number[]) {
   const stack: number[] = [];
   for (let i = 0; i < nums.length; i++) {
     const indexNum = stack.indexOf(nums[i]);
@@ -41,4 +41,20 @@ var singleNumber = function (nums: number[]) {
 //[4,1,2]
 //1がくるstackにあるからそれをstack.splice
 //return stack[0]
+```
+
+テストコード
+
+```javascript
+import { singleNumber } from "./App";
+
+describe("関数singleNumberのチェック", () => {
+  test.each([
+    [3, 1, 1, 3],
+    [4, 2, 2, 4],
+    [1, 1, 2, 2],
+  ])("test(%d,%d,%d)", (a, b, c, expected) => {
+    expect(singleNumber([a, b, c])).toBe(expected);
+  });
+});
 ```
