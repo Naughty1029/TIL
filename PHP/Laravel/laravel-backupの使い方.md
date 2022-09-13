@@ -29,7 +29,8 @@ php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
 
 ### 設定ファイルを編集
 
-```php:config/backup.php
+config/backup.php
+```php
 'source' => [
 
     'files' => [
