@@ -14,3 +14,7 @@ let user: {
 
 user = { username : "marsquai" , 1: true, 2: false, 3: true, 100:false};
 ```
+
+参考リンク先  
+https://typescript-jp.gitbook.io/deep-dive/type-system/index-signatures
+https://qiita.com/sa_tech0518/items/59026af48a9aa24d383f

@@ -13,7 +13,7 @@ componentWillUnmount()
 
 ## 3種類のライフサイクル
 1.Mouting <br>
-→コンポーネントが生まれる期間　<br>
+→コンポーネントが生まれる期間<br>
 2.Updating <br>
 →コンポーネントが更新される期間<br>
 3.Unmouting <br>

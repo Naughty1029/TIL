@@ -14,8 +14,6 @@ TODAY, WHAT I LEARNED?
 - [CSS](https://github.com/Naughty1029/TIL/tree/main/CSS)
 - [PHP](https://github.com/Naughty1029/TIL/tree/main/PHP)
     - [Laravel](https://github.com/Naughty1029/TIL/tree/main/Laravel)
-- [DataBase](https://github.com/Naughty1029/TIL/tree/main/DataBase)
-    - [sqlite](https://github.com/Naughty1029/TIL/tree/main/sqlite)
 - [AWS](https://github.com/Naughty1029/TIL/tree/main/AWS)
 - [Heroku](https://github.com/Naughty1029/TIL/tree/main/Heroku)
 - [Git](https://github.com/Naughty1029/TIL/tree/main/Git)

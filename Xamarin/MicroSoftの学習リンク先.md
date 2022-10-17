@@ -1,2 +1,0 @@
-- [Microsoft Learn](https://learn.microsoft.com/ja-jp/)
-- []
