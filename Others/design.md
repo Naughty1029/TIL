@@ -1,31 +1,31 @@
-新人にブックマークして欲しいページ（デザイナー編）
 新人さんの手が空いた時読むブックマークリストや、知っておくと便利なサイトなどを書いておきます。（先輩デザイナーは追加してください）
+
 またデザイナー編としてますが、ディレクター、エンジニアの人が見てもいいと思います。
 
 ## デザインキュレーションサイト
-**Pinterest**
-https://www.pinterest.jp/
-デザイン全般、海外~国内のデザイン・写真・GIF・動画をキーワード検索可
-自分用に非公開フォルダ分けして保存もできる！
-類似の写真がたくさん出てくるので、参考イメージ探すのに重宝してます
-![スクリーンショット 2022-05-10 10.40.48.png](https://image.docbase.io/uploads/ab8aebd7-1394-4f7c-aa28-b1f1ee39709b.png =WxH)
+**Pinterest**  
+https://www.pinterest.jp/  
+デザイン全般、海外~国内のデザイン・写真・GIF・動画をキーワード検索可  
+自分用に非公開フォルダ分けして保存もできる！  
+類似の写真がたくさん出てくるので、参考イメージ探すのに重宝してます  
+
 <br>
-**io 3000**
-https://io3000.com/
-最近の綺麗なサイトが多いです。
-カテゴリーやカラー絞って検索できるのありがたい。
-![スクリーンショット 2022-05-10 10.42.56.png](https://image.docbase.io/uploads/b078b008-4cb2-4ad0-a2fb-c8535cfd63b0.png =WxH)
+**io 3000**  
+https://io3000.com/  
+最近の綺麗なサイトが多いです。  
+カテゴリーやカラー絞って検索できるのありがたい。  
+
 <br>
-**muuuuu**
-https://muuuuu.org/
-主に縦長のサイトのギャラリー。演出とかの幅を広げるときに見る
-![スクリーンショット 2022-05-10 10.44.11.png](https://image.docbase.io/uploads/8a82f7d8-fe24-44f6-a78c-91e09e982cd6.png =WxH)
+**muuuuu**  
+https://muuuuu.org/  
+主に縦長のサイトのギャラリー。演出とかの幅を広げるときに見る  
+
 <br>
-**Responsive Web Design JP**
-https://responsive-jp.com/
+**Responsive Web Design JP**  
+https://responsive-jp.com/  
 PCとスマートフォンどちらも美デザインなサイトを紹介してる。　
 io 3000と比べると、よりシンプルな綺麗系サイトが多いです。
-![スクリーンショット 2022-05-10 10.44.54.png](https://image.docbase.io/uploads/a03158ec-7988-401c-a063-a601ecdd8aa4.png =WxH)
+
 <br>
 **Behance**
 https://www.behance.net/
