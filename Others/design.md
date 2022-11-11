@@ -161,8 +161,3 @@ https://loosedrawing.com/
 https://soco-st.com/  
 
 <br>
-
-## お勉強系
-**デザイナー向け 社内セミナー動画**    
-各youtubeのページにスライド資料もあります。   
-https://www.youtube.com/playlist?list=PLbgOHBAUwc_ecREPh3lTC9wKSE51RwgeT
