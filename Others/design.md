@@ -109,63 +109,61 @@ https://www.foodiesfeed.com/
 <br>
 
 **Startup Stock Photos**  
-https://startupstockphotos.com/
+https://startupstockphotos.com/  
 ビジネスシーンの写真サイト！無料
 
 <br> 
 
-**kaboompics** 
-https://kaboompics.com/  
+**kaboompics**   
+https://kaboompics.com/    
 おしゃインテリア系の写真多いサイト！無料
 
 <br>
 
-## アイコンイラスト素材
-**icooon mono**
-https://icooon-mono.com/   
+## アイコンイラスト素材    
+**icooon mono**  
+https://icooon-mono.com/     
 アイコン画像png、svgダウンロードできる  
 
 <br>
 
 **シルエットAC**  
-
-https://www.silhouette-ac.com/index.html  
-
+https://www.silhouette-ac.com/index.html   
 ちょっとリアルなシルエット素材、種類
 
 <br>
 
-**Human Pictogram**
-https://pictogram2.com/  
+**Human Pictogram**  
+https://pictogram2.com/    
 いろんな「人」のピクトグラム  
 職業別のアイコンやお客様の声で老若男女表現したい時などに
 
 <br>
 
-**Frame Design**
-https://frames-design.com/  
+**Frame Design**  
+https://frames-design.com/    
 いろんなフレーム！  
 svgダウンロードできるので、DLしてから微調整しても使いやすいです。
 <br>
 
-**矢印素材**
-http://yajidesign.com/  
+**矢印素材**  
+http://yajidesign.com/    
 自分で作るよりDLした方が早い場合はここから探したりします。
 
 <br>
 
-**loosedraw.com**
-https://loosedrawing.com/
+**loosedraw.com**  
+https://loosedrawing.com/  
 
 
 <br>
 
-**ソコスト**
+**ソコスト**  
 https://soco-st.com/  
 
 <br>
 
 ## お勉強系
-**デザイナー向け 社内セミナー動画**  
-各youtubeのページにスライド資料もあります。  
+**デザイナー向け 社内セミナー動画**    
+各youtubeのページにスライド資料もあります。   
 https://www.youtube.com/playlist?list=PLbgOHBAUwc_ecREPh3lTC9wKSE51RwgeT
