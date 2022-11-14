@@ -1,7 +1,3 @@
-新人さんの手が空いた時読むブックマークリストや、知っておくと便利なサイトなどを書いておきます。（先輩デザイナーは追加してください）
-
-またデザイナー編としてますが、ディレクター、エンジニアの人が見てもいいと思います。
-
 ## デザインキュレーションサイト
 **Pinterest**  
 https://www.pinterest.jp/  
@@ -68,16 +64,14 @@ https://partsdesign.net/
 
 **Adobe Stock**  
 https://stock.adobe.com/jp/  
-5sで使用するレンポジはほぼコレです。
+有名レンポジといえばこれ！
 
 <br>
 
 **amana images**  
 https://amanaimages.com/home.aspx  
 
-Adobe Stockより日本人の写真が多いです。  
-購入する時は会社のクレジットカードを使用するので
-早めに中条さんアポが必要です。
+Adobe Stockより日本人の写真が多いです。 
 
 <br>
 
@@ -153,11 +147,17 @@ http://yajidesign.com/
 
 **loosedraw.com**  
 https://loosedrawing.com/  
-
+シンプルでかわいいイラストが揃ってます。
 
 <br>
 
 **ソコスト**  
 https://soco-st.com/  
+“ソコソコ使えるイラスト素材集”  
+シンプルで汎用性のあるイラスト
 
 <br>
+
+**DOTOWN**
+https://dotown.maeda-design-room.net/
+ドット絵のダウンロードサイト。使い所限られるけど可愛い素材いっぱい。
