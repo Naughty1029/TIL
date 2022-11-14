@@ -22,8 +22,8 @@ https://muuuuu.org/
 
 **Responsive Web Design JP**  
 https://responsive-jp.com/  
-PCとスマートフォンどちらも美デザインなサイトを紹介してる。　
-io 3000と比べると、よりシンプルな綺麗系サイトが多いです。
+PCとスマートフォンどちらも美デザインなサイトを紹介してる。　  
+io3000と比べると、よりシンプルな綺麗系サイトが多いです。
 
 <br>
 
