@@ -51,3 +51,8 @@ docker ps
 ```
 docker start myapp_c3
 ```
+
+Voluem
+```
+docker run --name myapp_nodemon -p 4000:4000 --rm -v /Users/watanabemasahiro/Documents/docker/api:/app -v /app/node_modules myapp:nodemon
+```
