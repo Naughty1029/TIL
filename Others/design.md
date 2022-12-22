@@ -41,15 +41,14 @@ Behanceみたいな海外のポートフォリオ多め
 
 <br>
 
-**Awwwards**
+**Awwwards**  
 https://www.awwwards.com/  
 国際的なwebデザインアワード
 
 <br>
 
-**Collect UI**
+**Collect UI**  
 https://collectui.com/  
-
 用途別に集められたデザイン
 
 <br>
